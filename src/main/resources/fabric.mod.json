@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "chatfilter",
+	"version": "${version}",
+	"name": "ChatFilter",
+	"description": "Filters chat messages based on customizable rules.",
+	"authors": [
+		"cbwln"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/chatfilter",
+		"sources": "https://github.com/cbwln/chatfilter"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/chatfilter/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.cbwln.chatfilter.ChatFilter"
+		]
+	},
+	"mixins": [
+		"chatfilter.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
