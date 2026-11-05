@@ -27,5 +27,5 @@ jobs:
         with:
           modrinth-id: 1mKbR7qk
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          files: 'build/libs/!(*-@(dev|sources|javadoc)).jar'
