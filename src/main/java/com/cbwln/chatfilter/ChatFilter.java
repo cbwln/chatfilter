@@ -1,7 +1,6 @@
 package com.cbwln.chatfilter;
 
 import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.tree.CommandNode;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommands;
@@ -21,8 +20,7 @@ public class ChatFilter implements ClientModInitializer {
         config = FilterConfig.load();
 
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, commandBuildContext) -> {
-            CommandNode<FabricClientCommandSource> chatfilter = dispatcher.register(ClientCommands.literal("chatfilter").executes(ChatFilter::openScreen));
-            dispatcher.register(ClientCommands.literal("cf").executes(ChatFilter::openScreen).redirect(chatfilter));
+            dispatcher.register(ClientCommands.literal("chatfilter").executes(ChatFilter::openScreen));
         });
     }
 
